@@ -12,7 +12,9 @@ class LoginPage(BrowserUtils):
         self.signin_button=(By.ID, "signInBtn")
 
     def login(self,user_name,password):
-        self.driver.find_element(*self.username_input).send_keys(user_name)
+        name=self.driver.find_element(*self.username_input).send_keys(user_name)
         self.driver.find_element(*self.password_input).send_keys(password)
         self.driver.find_element(*self.signin_button).click()
+        print(name)
+
 
